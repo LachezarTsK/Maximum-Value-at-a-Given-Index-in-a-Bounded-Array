@@ -37,13 +37,13 @@ function getTotalSum(targetIndex, currentValue, totalInput) {
     let totalMembers = lastMember - firstMember + 1;
 
     const firstPartSum = getSumArithmeticProgression(firstMember, lastMember, totalMembers)
-            + getSumElementsOutsideArithmeticProgression(targetIndex, currentValue);
+                       + getSumElementsOutsideArithmeticProgression(targetIndex, currentValue);
 
     firstMember = getFirstMemberOfArithmeticProgression(totalInput - targetIndex - 1, currentValue);
     totalMembers = lastMember - firstMember + 1;
 
     const secondPartSum = getSumArithmeticProgression(firstMember, lastMember, totalMembers)
-            + getSumElementsOutsideArithmeticProgression(totalInput - targetIndex - 1, currentValue);
+                        + getSumElementsOutsideArithmeticProgression(totalInput - targetIndex - 1, currentValue);
 
     //'currentValue' is contained both in 'firstPartSum' and in 'secondPartSum'
     //therefore, for a correct total sum, subtract 'currentValue' once.
