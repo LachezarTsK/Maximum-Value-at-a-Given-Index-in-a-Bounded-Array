@@ -42,7 +42,7 @@ public class Solution {
     }
 
     private int getFirstMemberOfArithmeticProgression(int targetIndex, int currentValue) {
-        return currentValue <= targetIndex + 1 ? 1 : currentValue - targetIndex;
+        return (currentValue <= targetIndex + 1) ? 1 : (currentValue - targetIndex);
     }
 
     private long getSumArithmeticProgression(int firstMember, int lastMember, int totalMembers) {
@@ -50,6 +50,6 @@ public class Solution {
     }
 
     private int getSumElementsOutsideArithmeticProgression(int targetIndex, int currentValue) {
-        return currentValue >= targetIndex + 1 ? 0 : targetIndex - currentValue + 1;
+        return (currentValue >= targetIndex + 1) ? 0 : (targetIndex - currentValue + 1);
     }
 }
