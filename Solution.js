@@ -56,7 +56,7 @@ function getTotalSum(targetIndex, currentValue, totalInput) {
  * @return {number}
  */
 function getFirstMemberOfArithmeticProgression(targetIndex, currentValue) {
-    return currentValue <= targetIndex + 1 ? 1 : currentValue - targetIndex;
+    return (currentValue <= targetIndex + 1) ? 1 : (currentValue - targetIndex);
 }
 
 /**
@@ -75,5 +75,5 @@ function getSumArithmeticProgression(firstMember, lastMember, totalMembers) {
  * @return {number}
  */
 function getSumElementsOutsideArithmeticProgression(targetIndex, currentValue) {
-    return currentValue >= targetIndex + 1 ? 0 : targetIndex - currentValue + 1;
+    return (currentValue >= targetIndex + 1) ? 0 : (targetIndex - currentValue + 1);
 }
